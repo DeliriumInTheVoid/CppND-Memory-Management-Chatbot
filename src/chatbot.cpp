@@ -58,6 +58,7 @@ ChatBot::ChatBot(ChatBot&& other)
 
     _chatLogic = other._chatLogic;
     other._chatLogic = nullptr;
+    _chatLogic->SetChatbotHandle(this);
 }
 
 ChatBot& ChatBot::operator=(ChatBot&& other)
@@ -79,6 +80,7 @@ ChatBot& ChatBot::operator=(ChatBot&& other)
 
     _chatLogic = other._chatLogic;
     other._chatLogic = nullptr;
+    _chatLogic->SetChatbotHandle(this);
 
     return *this;
 }
