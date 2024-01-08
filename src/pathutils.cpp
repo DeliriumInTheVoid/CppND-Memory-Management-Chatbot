@@ -41,7 +41,8 @@ std::string GetDataPath()
 {
     if (dataDir.empty())
     {
-        dataDir = GetParentDirIfExists(GetExecutableDir(), GetExecutableDir()) + wxFileName::GetPathSeparator();
+        auto separator = wxFileName::GetPathSeparator();
+        dataDir = GetExecutableDir() + separator + "data" + separator;
     }
 
     return dataDir;
@@ -51,7 +52,8 @@ std::string GetImagesBasePath()
 {
     if (imagesBaseDir.empty())
     {
-        imagesBaseDir = GetDataPath() + "images/";
+        auto separator = wxFileName::GetPathSeparator();
+        imagesBaseDir = GetExecutableDir() + separator + "images" + separator;
     }
 
     return imagesBaseDir;

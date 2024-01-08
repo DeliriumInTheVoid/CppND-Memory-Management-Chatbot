@@ -125,7 +125,7 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
     _chatLogic->SetPanelDialogHandle(this);
 
     // load answer graph from file
-    _chatLogic->LoadAnswerGraphFromFile(GetDataPath() + "src/answergraph.txt");
+    _chatLogic->LoadAnswerGraphFromFile(GetDataPath() + "answergraph.txt");
 
     ////
     //// EOF STUDENT CODE
